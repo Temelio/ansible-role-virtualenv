@@ -10,7 +10,7 @@ describe 'virtualenv Ansible role' do
     packages = Array[]
 
     if ['debian', 'ubuntu'].include?(os[:family])
-        packages = Array[ 'apt' ]
+        packages = Array[ 'python-dev', 'python-virtualenv' ]
     end
 
     it 'install role packages' do

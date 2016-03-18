@@ -2,3 +2,19 @@
 
 # Main tasks file for virtualenv role
 
+- name: Load OS variables
+  include_vars: "{{ role_path }}/vars/{{ ansible_os_family | lower }}.yml"
+  tags:
+    - virtualenv
+    - install
+
+- name: Install packages
+  become: True
+  package:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items: "{{ virtualenv_packages }}"
+  tags:
+    - virtualenv
+    - install
+
