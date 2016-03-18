@@ -1,0 +1,8 @@
+---
+
+virtualenv_packages:
+  - name: 'python-dev'
+    state: 'present'
+  - name: 'python-virtualenv'
+    state: 'present'
+
