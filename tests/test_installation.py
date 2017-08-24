@@ -2,14 +2,19 @@
 Role tests
 """
 
+import pytest
 from testinfra.utils.ansible_runner import AnsibleRunner
 
 testinfra_hosts = AnsibleRunner('.molecule/ansible_inventory').get_hosts('all')
 
 
-def test_foo_a(User):
-    assert User().name == 'root'
+@pytest.mark.parametrize('name', [
+    ('python-dev'),
+    ('python-virtualenv'),
+])
+def test_packages(host, name):
+    """
+    Test installed packages
+    """
 
-
-def test_foo_b(User):
-    assert User().name == 'root'
+    assert host.package(name).is_installed
