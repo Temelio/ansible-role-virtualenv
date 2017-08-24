@@ -1,19 +1,21 @@
 ---
 
 galaxy_info:
-  author: Alexandre Chaussier
-  description: Install and manage virtualenv
-  company: Temelio (http://temelio.com)
-  license: MIT
-  min_ansible_version: 2.0
-  github_branch: master
+  author: 'Alexandre Chaussier'
+  description: 'Ansible role to install and manage virtualenv'
+  company: 'Temelio (http://www.temelio.com)'
+  license: 'MIT'
+  min_ansible_version: '2.0'
+  github_branch: 'master'
   platforms:
-    - name: Ubuntu
+    - name: 'Debian'
       versions:
-        - trusty
+        - 'jessie'
+    - name: 'Ubuntu'
+      versions:
+        - 'trusty'
+        - 'xenial'
   galaxy_tags:
-    - packaging
-    - development
-    - python
+    - 'development'
+    - 'python'
 dependencies: []
-
