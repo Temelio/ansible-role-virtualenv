@@ -1,3 +1,5 @@
 ---
 
 # Defaults vars file for virtualenv role
+
+virtualenv_packages: "{{ _virtualenv_packages }}"

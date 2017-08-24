@@ -7,21 +7,15 @@
   tags:
     - 'role::virtualenv'
     - 'role::virtualenv::init'
+    - 'role::virtualenv::install'
 
 
-- name: Load OS variables
-  include_vars: "{{ role_path }}/vars/{{ ansible_os_family | lower }}.yml"
-  tags:
-    - virtualenv
-    - install
-
-- name: Install packages
+- name: 'INSTALL | Manage packages installation'
   become: True
   package:
     name: "{{ item.name }}"
-    state: "{{ item.state }}"
+    state: "{{ item.state | default('present') }}"
   with_items: "{{ virtualenv_packages }}"
   tags:
-    - virtualenv
-    - install
-
+    - 'role::virtualenv'
+    - 'role::virtualenv::install'

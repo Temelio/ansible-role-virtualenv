@@ -1,0 +1,5 @@
+---
+
+_virtualenv_packages:
+  - name: 'python-dev'
+  - name: 'python-virtualenv'

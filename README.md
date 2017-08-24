@@ -46,6 +46,7 @@ $ MOLECULE_DRIVER=vagrant tox
 ### Default role variables
 
 ``` yaml
+virtualenv_packages: "{{ _virtualenv_packages }}"
 ```
 
 ## Dependencies
