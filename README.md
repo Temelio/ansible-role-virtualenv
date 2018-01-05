@@ -1,6 +1,10 @@
 # virtualenv
 
-[![Build Status](https://travis-ci.org/Temelio/ansible-role-virtualenv.svg?branch=master)](https://travis-ci.org/Temelio/ansible-role-virtualenv)
+[![Build Status](https://img.shields.io/travis/Temelio/ansible-role-virtualenv/master.svg?label=travis_master)](https://travis-ci.org/Temelio/ansible-role-virtualenv)
+[![Build Status](https://img.shields.io/travis/Temelio/ansible-role-virtualenv/develop.svg?label=travis_develop)](https://travis-ci.org/Temelio/ansible-role-virtualenv)
+[![Updates](https://pyup.io/repos/github/Temelio/ansible-role-virtualenv/shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-virtualenv/)
+[![Python 3](https://pyup.io/repos/github/Temelio/ansible-role-virtualenv/python-3-shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-virtualenv/)
+[![Ansible Role](https://img.shields.io/ansible/role/8592.svg)](https://galaxy.ansible.com/Temelio/virtualenv/)
 
 Install virtualenv package.
 
