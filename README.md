@@ -1,31 +1,38 @@
 # virtualenv
 
-[![Build Status](https://travis-ci.org/Temelio/ansible-role-virtualenv.svg?branch=master)](https://travis-ci.org/Temelio/ansible-role-virtualenv)
+[![Build Status](https://img.shields.io/travis/Temelio/ansible-role-virtualenv/master.svg?label=travis_master)](https://travis-ci.org/Temelio/ansible-role-virtualenv)
+[![Build Status](https://img.shields.io/travis/Temelio/ansible-role-virtualenv/develop.svg?label=travis_develop)](https://travis-ci.org/Temelio/ansible-role-virtualenv)
+[![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![Updates](https://pyup.io/repos/github/Temelio/ansible-role-virtualenv/shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-virtualenv/)
+[![Python 3](https://pyup.io/repos/github/Temelio/ansible-role-virtualenv/python-3-shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-virtualenv/)
+[![Ansible Role](https://img.shields.io/ansible/role/8592.svg)](https://galaxy.ansible.com/Temelio/virtualenv/)
+[![GitHub tag](https://img.shields.io/github/tag/temelio/ansible-role-virtualenv.svg)](https://github.com/Temelio/ansible-role-virtualenv/tags)
 
 Install virtualenv package.
 
 ## Requirements
 
-This role requires Ansible 2.0 or higher,
+This role requires Ansible 2.4 or higher,
 and platform requirements are listed in the metadata file.
 
 ## Testing
 
 This role use [Molecule](https://github.com/metacloud/molecule/) to run tests.
 
-Locally, you can run tests on Docker (default driver) or Vagrant.
-Travis run tests using Docker driver only.
+Local and Travis tests run tests on Docker by default.
+See molecule documentation to use other backend.
 
 Currently, tests are done on:
-- Debian Jessie
+- Debian Stretch
 - Ubuntu Trusty
 - Ubuntu Xenial
+- Ubuntu Bionic
 
 and use:
-- Ansible 2.0.x
-- Ansible 2.1.x
-- Ansible 2.2.x
-- Ansible 2.3.x
+- Ansible 2.4.x
+- Ansible 2.5.x
+- Ansible 2.6.x
+- Ansible 2.7.x
 
 ### Running tests
 
@@ -33,12 +40,6 @@ and use:
 
 ```
 $ tox
-```
-
-#### Using Vagrant driver
-
-```
-$ MOLECULE_DRIVER=vagrant tox
 ```
 
 ## Role Variables
@@ -67,6 +68,5 @@ MIT
 
 ## Author Information
 
-Alexandre Chaussier (for Temelio company)
-- http://www.temelio.com
-- alexandre.chaussier [at] temelio.com
+A Chaussier, L Machetel (for Temelio company)
+- https://www.temelio.com
